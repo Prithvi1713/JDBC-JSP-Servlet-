@@ -1,4 +1,6 @@
-##  i have created the simple project using jsp, servlet, jdbc  from this project you understand the working flow of how jsp, jdbc, servlet working flow  
+##  This project is a simple web-based application developed using Java Servlets, JSP, and JDBC for database interaction. 
+##  It allows users to register, log in, and manage their accounts. The project is designed to demonstrate basic web application development using Java technologies.
+
 
 
 
