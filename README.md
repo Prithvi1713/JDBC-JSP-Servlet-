@@ -1,6 +1,6 @@
-##  This project is a simple web-based application developed using Java Servlets, JSP, and JDBC for database interaction. 
-# This web application allows users to register, log in, and view a dashboard using JSP, Servlets, and JDBC. 
-# The registration form collects the user's first name, last name, email, and username (with validation for unique usernames and email format). 
+####  This project is a simple web-based application developed using Java Servlets, JSP, and JDBC for database interaction. 
+### This web application allows users to register, log in, and view a dashboard using JSP, Servlets, and JDBC. 
+## The registration form collects the user's first name, last name, email, and username (with validation for unique usernames and email format). 
 # Upon successful registration, a random key is generated and displayed. 
 # The login form validates the username, password, and generated key, and redirects to a dashboard that displays all registered usernames and their associated keys. 
 # The front-end is built with Bootstrap for responsive design, and jQuery is used for client-side validation.
