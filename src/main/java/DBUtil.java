@@ -8,8 +8,8 @@ public class DBUtil {
     private static final String USER = "root";
     private static final String PASSWORD = "prithviraj";
 
-   static {
-       try {
+    static {
+        try {
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {

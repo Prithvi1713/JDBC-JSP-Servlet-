@@ -8,14 +8,14 @@ import java.security.SecureRandom;
 import java.sql.*;
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+
     private UserDao userDao;
 
     public void init() {
         userDao = new UserDao();
     }
 
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
@@ -26,19 +26,19 @@ public class RegisterServlet extends HttpServlet {
 
 
 
-           //  UserDao userDao = new UserDao();
-            if (userDao.isUsernameAvailable(username)) {
-                // Username is available, proceed with registration
-                User user = new User(firstName, lastName, email, username, password, key);
-                userDao.saveUser(user);
+        //  UserDao userDao = new UserDao();
+        if (userDao.isUsernameAvailable(username)) {
+            // Username is available, proceed with registration
+            User user = new User(firstName, lastName, email, username, password, key);
+            userDao.saveUser(user);
 
-                request.setAttribute("key", key);
-                request.getRequestDispatcher("register-success.jsp").forward(request, response);
-            } else {
-                // Username is already taken, redirect to error page or show an error message
-                request.setAttribute("errorMessage", "Username already exists.");
-                request.getRequestDispatcher("register.jsp").forward(request, response);
-            }
+            request.setAttribute("key", key);
+            request.getRequestDispatcher("register-success.jsp").forward(request, response);
+        } else {
+            // Username is already taken, redirect to error page or show an error message
+            request.setAttribute("errorMessage", "Username already exists.");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+        }
     }
 
     private String generateRandomKey() {

@@ -1,11 +1,11 @@
 public class User {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String username;
-    private String password;
-    private String key;
+    int id;
+    String firstName;
+    String lastName;
+    String email;
+    String username;
+    String password;
+    String key;
 
     public User(String firstName, String lastName, String email, String username, String password, String key) {
         this.firstName = firstName;
